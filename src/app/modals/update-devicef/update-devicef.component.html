@@ -1,0 +1,42 @@
+
+<h2 mat-dialog-title>Register New Device</h2>
+<mat-dialog-content class="mat-typography">
+ <form >
+   <div class="form-group">
+     <input
+       [(ngModel)]="data.deviceName" name="data.deviceName"
+       class="form-control"
+       placeholder="Name"
+     />
+   </div>
+
+   <div class="form-group">
+     <input
+       [(ngModel)]="data.location" name="data.location"
+       class="form-control"
+       placeholder="location"
+     />
+   </div>
+   <div class="form-group">
+     <input
+       [(ngModel)]="data.schedule" name="data.schedule"
+       class="form-control"
+       placeholder="schedule"
+     />
+   </div>
+   <div class="form-group">
+     <input
+       [(ngModel)]="data.deviceType"
+       class="form-control"
+       placeholder="Type"
+     />
+   </div>
+ </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+ <button (click)="updateDevice()" class="btn btn-success">Update</button>
+
+ <button (click)="cancel()" text="center" class="btn btn-danger">
+   Cancel
+ </button>
+</mat-dialog-actions> 

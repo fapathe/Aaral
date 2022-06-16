@@ -1,0 +1,57 @@
+<!-- 
+ <form>
+    <div class="form-group">
+        <div>
+            <label for="register">Register New Padlock</label>
+    
+        </div>
+        <div class="form-group">
+
+        <input  [(ngModel)]="data.padlockColor" class="form-control"  placeholder="Color">
+
+        </div>
+        <div class="form-group">
+       
+        <input [(ngModel)]="data.state" class="form-control" placeholder="State">
+        </div>
+        <div class="form-group">
+       
+        <input [(ngModel)]="data.enrollDate" class="form-control" placeholder="Date">
+        </div>
+        
+    
+        </div>
+        <button  style="width: 80px;" (click)="submitForm()" class="btn btn-success">Add</button>
+       
+        <button  style="width: 80px;" (click)="cancel()"  text="center" class="btn btn-danger">Cancel</button>
+    </form> -->
+
+    <h2 mat-dialog-title>Register New Padlock</h2>
+<mat-dialog-content class="mat-typography">
+    <form >
+
+             <div class="form-group">
+           
+            <input [(ngModel)]="data.serialNumber" class="form-control" placeholder="Serial Number">
+            </div>
+            
+            <div class="form-group">
+            
+            <input  [(ngModel)]="data.padlockColor" class="form-control"  placeholder="Color">
+    
+            </div>
+            <div class="form-group">
+           
+            <input [(ngModel)]="data.state" class="form-control" placeholder="State">
+            </div>
+            
+        
+
+    </form>
+  
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button   (click)="submitForm()" class="btn btn-success">Add New</button>
+       
+    <button   (click)="cancel()"  text="center" class="btn btn-danger">Cancel</button>
+</mat-dialog-actions>

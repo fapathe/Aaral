@@ -1,0 +1,29 @@
+<h2 mat-dialog-title >Update Padlock</h2>
+<mat-dialog-content class="mat-typography">
+    <form >
+
+             <div class="form-group">
+           
+            <input [(ngModel)]="data.serialNumber" name="data.serialNumber" class="form-control" placeholder="Serial Number">
+            </div>
+            
+            <div class="form-group">
+            
+            <input  [(ngModel)]="data.padlockColor" name="data.padlockColor" class="form-control"  placeholder="Color">
+    
+            </div>
+            <div class="form-group">
+           
+            <input [(ngModel)]="data.state" name="data.state" class="form-control" placeholder="State">
+            </div>
+            
+        
+
+    </form>
+  
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button  (click)="update()" class="btn btn-success">Update</button>
+       
+    <button   (click)="cancel()"  text="center" class="btn btn-danger">Cancel</button>
+</mat-dialog-actions>

@@ -1,0 +1,151 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+          
+            <button class="btn btn-info"  (click)="showMovePad()"> 
+            <span><i class="fa fa-truck" aria-hidden="true"></i></span>
+            &nbsp;
+             Moving
+            </button>
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            <button class="btn btn-primary" (click)="showFixedPad()">
+                <span><i class="fa fa-stop" aria-hidden="true"></i></span>
+                &nbsp;
+                Fixed
+            </button>
+            <div class="col-md-12">
+                <div class="card"  *ngIf="isDeviceMoved">
+                    <div class="card-header card-header-danger" >
+                        <h4 class="card-title ">List Of Protected Objects </h4>
+                        <p class="card-category"> For Moving Type</p>
+                     
+                        <button class="btn btn-success btn-sm " (click)="addM()" style="float: right;"><i class="fa fa-plus"></i> </button>
+                    </div>
+                    <div class="card-body" >
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class=" text-primary">
+                                    <th>
+                                        Name
+                                    </th>
+                                    <th>
+                                        Matricule
+                                    </th>
+                                    <th>
+                                        Color
+                                    </th>
+                                    
+                                    <th>
+                                        Actions
+                                    </th> 
+                                    
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let devicem of devicesMoving" >
+                                        <td>
+                                            {{devicem.deviceName}}
+                                        </td>
+                                        <td>
+                                            {{devicem.matricule}}
+                                        </td>
+                                        <td>
+                                            
+                                            {{devicem.deviceColor}}
+                                        </td>
+                                       
+                                        <td>
+                                            
+                                        <div>
+                                            <button class="btn btn-warning btn-sm "  (click)="goToUpdate(devicem)"><i class="fa fa-edit"></i> </button>
+                                            &nbsp;
+                                            <button class="btn btn-danger btn-sm " (click)="deleteDevice(devicem)"><i class="fa fa-trash"></i> </button>
+                                        </div>
+                                        </td>
+                                         
+                                        
+                          
+                                        
+                                    </tr>
+                                    
+
+                               
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="card"  *ngIf="isDeviceFIxed">
+                <div class="card-header card-header-danger" >
+                    <h4 class="card-title ">List Of Protected Objects </h4>
+                    <p class="card-category"> For fixed Type</p>
+                 
+                    <button class="btn btn-success btn-sm " (click)="addf()" style="float: right;"><i class="fa fa-plus"></i> </button>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead class=" text-primary">
+                                <th>
+                                    Name
+                                </th>
+                                <th>
+                                    Location
+                                </th>
+                                <th>
+                                    Schedule
+                                </th>
+                                
+                                <th>
+                                    Actions
+                                </th> 
+                                
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let devicef of devicesFixed ">
+                                    <td>
+                                        {{devicef.deviceName}}
+                                    </td>
+                                    <td>
+                                        {{devicef.location}}
+                                    </td>
+                                    <td>
+                                        
+                                        {{devicef.schedule}}
+                                    </td>
+                                   
+                                    <td>
+                                        
+                                    <div>
+                                        <button class="btn btn-warning btn-sm "  (click)="goToUpdatef(devicef)"><i class="fa fa-edit"></i> </button>
+                                        &nbsp;
+                                        <button class="btn btn-danger btn-sm " (click)="deletef(devicef)"><i class="fa fa-trash"></i> </button>
+                                    </div>
+                                    </td>
+
+                                    
+                               
+
+                                     
+                                    
+                      
+                                    
+                                </tr>
+                                
+
+                           
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+            
+
+   
